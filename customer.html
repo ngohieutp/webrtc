@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <meta charset="utf-8">
+    <title>Customer</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <button onclick="makeCall()">Make call</button>
+            </td>
+            <td>
+                Local SDP <br />
+                <textarea id="customer-sdp" style="border: solid 1px #dfdfdf;" rows="5" cols="50"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Remote SDP
+            </td>
+            <td>
+                <textarea id="agent-sdp" style="border: solid 1px #dfdfdf;" rows="5" cols="50"></textarea> <br />
+                <button onclick="connectAgent()">Connect Agent</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Local Candidate
+                <div id="local-candidate" style="border: solid 1px #dfdfdf;"></div>
+            </td>
+            <td>
+                <textarea id="remote-candidate" style="border: solid 1px #dfdfdf;" rows="5" cols="50"></textarea><br />
+                <button onclick="addRemoteCandidate()">Add remote candidate</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Customer<br />
+                <video id="localVideo" style="width: 200px;" muted autoplay playsinline></video>
+            </td>
+            <td>
+                Agent<br />
+                <video id="remoteVideo" style="width: 200px;" autoplay playsinline></video>
+            </td>
+        </tr>
+    </table>
+
+    <script src="customer.js"></script>
+</body>
+
+</html>

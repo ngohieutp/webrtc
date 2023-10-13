@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+<head>
+    <meta charset="utf-8">
+    <title>Agent</title>
+</head>
+<body>
+    <textarea id="customer-sdp" style="border: solid 1px #dfdfdf;" rows="5" cols="50"></textarea><br />
+    <button onclick="answerCall()">Answer call</button><br /><br />
+    <textarea id="agent-sdp" style="border: solid 1px #dfdfdf;" rows="5" cols="50"></textarea>
+    <div id="local-candidate" style="border: solid 1px #dfdfdf;"></div>
+    <textarea id="remote-candidate" style="border: solid 1px #dfdfdf;" rows="5" cols="50"></textarea><br />
+    <button onclick="addRemoteCandidate()">Add remote candidate</button><br /><br />
+    <table>
+        <tr>
+            <td>
+                Customer
+            </td>
+            <td>
+                Agent
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <video id="remoteVideo" style="width: 200px;" autoplay playsinline></video>
+            </td>
+            <td>
+                <video id="localVideo" style="width: 200px;" muted autoplay playsinline></video>
+            </td>
+        </tr>
+    </table>
+    <script src="agent.js"></script>
+</body>
+</html>
